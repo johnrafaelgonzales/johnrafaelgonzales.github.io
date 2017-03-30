@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Jaldi:700,400' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>My Online Portfolio</title>
+</head>
+<body>
+
+	<section class="cd-slider-wrapper">
+		<ul class="cd-slider">
+			<li class="visible">
+				<div>
+					<h2>John Rafael P. Gonzales</h2>
+					<h3>My Online Portfolio</h3>
+					
+				</div>
+			</li>
+				
+			<li class="second-slide">
+				<div>
+					<h2>About Me</h2>
+					<p>Hi, my name is John Rafael P. Gonzales and
+					<br>I'm a 3rd year student of AMA Computer College Malolos	
+					<br>I'm taking up B.S. in Information Technology because
+					<br>I'm interested in networking and software development.
+					<br>
+					<br>My strengths are self-confidence & dedication, positive attitude, and hard work. 
+					<br>My weakness is my soft nature that sometime harms me. 	
+					</p>
+					
+				</div>
+			</li>
+
+			<li>
+				<div>
+					<h2>Technical Skills</h2>
+					<h3>Web Design</h3>
+					<p>Have basic knowledge on HTML, CSS and Javascript</p>
+					<p>Knowledgeable on scripting languages such as PHP and ASP.NET</p>
+					<p>Proficient in Adobe Photoshop</p>
+					<h3>Hardware and Networking</h3>
+					<p>Proficient in computer installation and assembly</p>
+					<p>Able to perform OS installation and troubleshooting</p>
+					<p>Have basic knowledge in LAN networking setup and management</p>
+
+				</div>
+			</li>
+
+			<li>
+				<div>
+					<h2>Contact Me</h2>
+					<p>Mobile: 09366597143
+					<br>Email: Ttjcm_mOkz@yahoo.com
+					<br> Or message me below:	
+					</p>
+	<div class="form-wrapper">				
+   <form class="contact-form row" id="someForm">
+      <div class="form-field col x-50">
+         <input id="name" class="input-text js-input" type="text" required>
+         <label class="label" for="name">Name</label>
+      </div>
+      <div class="form-field col x-50">
+         <input id="email" class="input-text js-input" type="email" required>
+         <label class="label" for="email">E-mail</label>
+      </div>
+      <div class="form-field col x-100">
+         <input id="message" class="input-text js-input" type="text" required>
+         <label class="label" for="message">Message</label>
+      </div>
+      <div class="form-field col x-100 align-center">
+         <input class="submit-btn" type="submit" value="Submit">
+      </div>
+   </form></div>
+
+
+
+				</div>
+			</li>
+		</ul> <!-- .cd-slider -->
+	
+		<ol class="cd-slider-navigation">
+			<li class="selected"><a href="#0"><em>Home</em></a></li>
+			<li><a href="#0"><em>About Me</em></a></li>
+			<li><a href="#0"><em>Skills</em></a></li>
+			<li><a href="#0"><em>Contact Me</em></a></li>
+		</ol> <!-- .cd-slider-navigation -->
+		
+		<div class="cd-svg-cover" data-step1="M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z" data-step2="M1400,800H383L770.7,0.6c0.2-0.3,0.5-0.6,0.9-0.6H1400v294V800z" data-step3="M1400,800H0V0.6C0,0.4,0,0.3,0,0h1400v294V800z" data-step4="M615,800H0V0.6C0,0.4,0,0.3,0,0h615L393,312L615,800z" data-step5="M0,800h-2V0.6C-2,0.4-2,0.3-2,0h2v312V800z" data-step6="M-2,800h2L0,0.6C0,0.3,0,0.3,0,0l-2,0v294V800z" data-step7="M0,800h1017L629.3,0.6c-0.2-0.3-0.5-0.6-0.9-0.6L0,0l0,294L0,800z" data-step8="M0,800h1400V0.6c0-0.2,0-0.3,0-0.6L0,0l0,294L0,800z" data-step9="M785,800h615V0.6c0-0.2,0-0.3,0-0.6L785,0l222,312L785,800z" data-step10="M1400,800h2V0.6c0-0.2,0-0.3,0-0.6l-2,0v312V800z">
+			<svg height='100%' width="100%" preserveAspectRatio="none" viewBox="0 0 1400 800">
+				<title>SVG cover layer</title>
+				<desc>an animated layer to switch from one slide to the next one</desc>
+				<path id="cd-changing-path" d="M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z"/>
+			</svg>
+		</div> <!-- .cd-svg-cover -->
+	</section> <!-- .cd-slider-wrapper -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/snap.svg-min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script>
+	$( '.js-input' ).keyup(function() {
+  if( $(this).val() ) {
+     $(this).addClass('not-empty');
+  } else {
+     $(this).removeClass('not-empty');
+  }
+});
+	</script>
+	<script>
+	$(document).ready(function() {
+			    $('#someForm').on('submit', function(e) {
+				e.preventDefault();
+
+				//get the name field value
+				var name = $('#name').val();
+				//get the name field value
+				var email = $('#email').val();
+				//get the comments
+				var message = $('#message').val();
+
+				//pretend we don't need validation
+
+				//send to formspree
+				$.ajax({
+				    url:'https://formspree.io/ryanbaldoza@outlook.com',
+				    method:'POST',
+				    data:{
+					name:name,
+					_replyto:email,
+					 email:email,
+					comments:message,
+					_subject:'My Form Submission',
+				    },
+				    dataType:"json",
+				    success:function() {
+					console.log('success'); 
+					alert('Thank you for sending an email. I\'ll be contacting you soon.');
+					$('#name').val("");
+					    $('#email').val("");
+					    $('#message').val("");
+					  
+				    }   
+				});     
+
+			    });
+			}); 
+	</script>
+</body>
+</html>
