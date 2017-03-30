@@ -113,7 +113,7 @@ Slider
   margin: 0 auto 14px;
   color: #ffffff;
   width: 90%;
-  max-width: 520px;
+  max-width: 320px;
  
 }
 
@@ -148,7 +148,7 @@ Slider
 }
 @media only screen and (min-width: 768px) {
   .cd-slider > li h2, .cd-slider > li p {
-    max-width: 720px;
+    max-width: 320px;
   }
   .cd-slider > li h2 {
     font-size: 2.4em;
@@ -157,10 +157,20 @@ Slider
   .cd-slider > li .cd-btn {
     font-size: 1.4rem;
   }
+	.row .col.x-50 {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 468px) {
+	.row .col.x-50 {
+		width: 100% !important;
+	}
 }
 @media only screen and (min-width: 1170px) {
   .cd-slider > li h2, .cd-slider > li p {
     margin-bottom: 20px;
+	  max-width: 720px;
   }
   .cd-slider > li h2 {
     font-size: 3.2em;
